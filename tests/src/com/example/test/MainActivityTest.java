@@ -1,8 +1,11 @@
 package com.example.test;
 
-import com.example.MainActivity;
-
+import static com.google.android.apps.common.testing.ui.espresso.Espresso.*;
+import static com.google.android.apps.common.testing.ui.espresso.assertion.ViewAssertions.*;
+import static com.google.android.apps.common.testing.ui.espresso.matcher.ViewMatchers.*;
 import android.test.ActivityInstrumentationTestCase2;
+
+import com.example.MainActivity;
 
 public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActivity> {
 
@@ -12,6 +15,7 @@ public class MainActivityTest extends ActivityInstrumentationTestCase2<MainActiv
 	
 	public void testPreconditions() {
 		getActivity();
+		onView(withText("Hello world!")).check(matches(isDisplayed()));
 	}
 	
 	public void testToBeWritten() {
