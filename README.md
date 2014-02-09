@@ -12,6 +12,6 @@ Clone the repo.
 
     git clone URL Nice-project-name
 
-Update the project name project.
+Update the project name.
 
     find . -type f ! -name README.md -exec sed --in-place -e 's/PROJECT_NAME/Nice-project-name/g' {} +
